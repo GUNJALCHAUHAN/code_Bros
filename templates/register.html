@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register for {{ event['Event Name'] }}</title>
+</head>
+<body>
+    <h2>Register for {{ event['Event Name'] }}</h2>
+    <form method="POST" action="/register/{{ event['Event Name'] }}">
+        <div>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <div>
+            <label for="college">College Name:</label>
+            <input type="text" id="college" name="college" required>
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
