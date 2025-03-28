@@ -2,3 +2,5 @@ flask
 pymongo==4.6.1
 qrcode
 flask-mail
+Pillow
+reportlab
