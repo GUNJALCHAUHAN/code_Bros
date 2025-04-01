@@ -104,16 +104,16 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = 'dhairyagudadhe14@gmail.com'
-app.config['MAIL_PASSWORD'] = 'sqac szxq lhyq blhf'  # App password
-app.config['MAIL_DEFAULT_SENDER'] = ('EventChain', 'dhairyagudadhe14@gmail.com')
+app.config['MAIL_USERNAME'] = '**********************'
+app.config['MAIL_PASSWORD'] = '*************'  # App password
+app.config['MAIL_DEFAULT_SENDER'] = ('EventChain', '**********************')
 app.config['MAIL_MAX_EMAILS'] = None
 app.config['MAIL_ASCII_ATTACHMENTS'] = False
 
 mail = Mail(app)
 
 def generate_registration_qr(registration_data):
-    try:
+    try:S
         # Create QR code with better error correction and size
         qr = qrcode.QRCode(
             version=4,  # Increased version for more data capacity
@@ -201,7 +201,7 @@ def send_confirmation_email(registration, event, qr_code):
     try:
         msg = Message(
             subject='EventChain - Registration Confirmation',
-            sender=('EventChain', 'dhairyagudadhe14@gmail.com'),
+            sender=('EventChain', '**********************'),
             recipients=[registration['email']]
         )
         
@@ -444,7 +444,7 @@ def register(event_name):
             
             # Send confirmation email
             msg = Message('Event Registration Confirmation',
-                        sender='dhairyagudadhe14@gmail.com',
+                        sender='**********************',
                         recipients=[registration['email']])
             
             msg.html = f"""
@@ -668,7 +668,7 @@ def send_event_reminder():
         try:
             msg = Message(
                 'EventChain - Event Reminder',
-                sender=('EventChain', 'dhairyagudadhe14@gmail.com'),
+                sender=('EventChain', '**********************'),
                 recipients=[reg['email']]
             )
             
@@ -743,7 +743,7 @@ def send_reminders():
 def send_reminder_email(email, name, event_name):
     msg = Message(
         'EventChain - Event Reminder',
-        sender=('EventChain', 'dhairyagudadhe14@gmail.com'),
+        sender=('EventChain', '**********************'),
         recipients=[email]
     )
     msg.body = f"""Dear {name},
